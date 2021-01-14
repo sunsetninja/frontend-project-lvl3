@@ -20,7 +20,7 @@ beforeEach(() => {
 });
 
 test("init", async () => {
-  const helloElement = await screen.findByText(/hello world/);
+  const helloElement = await screen.findByText(/hello world/i);
 
   expect(helloElement).toBeInTheDocument();
 });
