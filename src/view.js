@@ -22,7 +22,7 @@ const renderFeeds = ({ feeds }) => {
   `;
 };
 
-const renderPosts = ({ posts, onPostClick }) => {
+const renderPosts = ({ posts, onPostClick, openedPostsIds }) => {
   const root = document.getElementById("root");
   const postsEl = root.querySelector('[data-component="posts"]');
 
@@ -33,9 +33,9 @@ const renderPosts = ({ posts, onPostClick }) => {
         .map(
           (post) => `
             <li class="list-group-item d-flex justify-content-between align-items-start">
-              <a href="${
-                post.link
-              }" class="font-weight-bold" data-id="2" target="_blank" rel="noopener noreferrer">
+              <a href="${post.link}" class="${
+            openedPostsIds.includes(post.id) ? "fw-normal" : "fw-bold"
+          }" data-id="2" target="_blank" rel="noopener noreferrer">
                 ${post.title}
               </a>
               <button type="button" class="btn btn-primary btn-sm" data-id=${
@@ -58,8 +58,6 @@ const renderPosts = ({ posts, onPostClick }) => {
 };
 
 export default (state, path, value, prevValue) => {
-  console.log({ path, value, prevValue });
-
   const root = document.getElementById("root");
   const modal = document.querySelector('[data-component="modal"]');
   const rssFormEl = root.querySelector('[data-component="rss-form"]');
@@ -112,12 +110,18 @@ export default (state, path, value, prevValue) => {
     renderFeeds({ feeds: value });
   }
 
-  if (path.includes("posts")) {
+  if (path.includes("posts") || path.includes("openedPostsIds")) {
     renderPosts({
-      posts: value,
+      posts: state.posts,
+      openedPostsIds: state.uiState.openedPostsIds,
       onPostClick: (postId) => {
         // eslint-disable-next-line no-param-reassign
         state.uiState.openedPostId = postId;
+        // eslint-disable-next-line no-param-reassign
+        state.uiState.openedPostsIds = [
+          ...state.uiState.openedPostsIds,
+          postId,
+        ];
       },
     });
   }
@@ -125,9 +129,13 @@ export default (state, path, value, prevValue) => {
   if (path.includes("uiState.openedPostId")) {
     const modalTitle = modal.querySelector('[data-element="modal-title"');
     const modalBody = modal.querySelector('[data-element="modal-body"');
+    const modalFullArticleLink = modal.querySelector(
+      '[data-element="modal-full-article-link"'
+    );
     const activePost = state.posts.find(({ id }) => id === value);
 
     modalTitle.textContent = activePost.title;
     modalBody.textContent = activePost.description;
+    modalFullArticleLink.setAttribute("href", activePost.link);
   }
 };

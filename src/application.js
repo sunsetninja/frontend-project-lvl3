@@ -53,7 +53,7 @@ const runApp = () => {
     posts: [],
     uiState: {
       openedPostId: null,
-      openedPosts: [],
+      openedPostsIds: [],
     },
   };
 
