@@ -3,7 +3,7 @@ install:
 install-ci:
 	npm ci
 lint:
-	npx eslint src
+	npx eslint .
 test:
 	npm test
 test-watch:
