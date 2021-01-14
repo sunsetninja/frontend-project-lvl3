@@ -7,9 +7,9 @@ lint:
 test:
 	npm test
 test-watch:
-	npx -n --experimental-vm-modules jest --watch
+	npm test -- --watch
 test-coverage:
-	npx -n --experimental-vm-modules jest --collectCoverage
+	npm test -- --collectCoverage
 develop:
 	npx webpack serve --mode development --env development --progress --config ./config/webpack/webpack.config.dev.cjs
 build:
