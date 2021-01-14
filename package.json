@@ -1,0 +1,49 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "RSS aggregator web app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunsetninja/frontend-project-lvl3.git"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Dmitriy Balashov <mockedcat@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/sunsetninja/frontend-project-lvl3/issues"
+  },
+  "homepage": "https://github.com/sunsetninja/frontend-project-lvl3#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@jest/globals": "^26.6.2",
+    "@testing-library/dom": "^7.29.4",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/user-event": "^12.6.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-import": "^1.13.3",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-prettier": "^3.3.0",
+    "html-webpack-plugin": "^4.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "jest-environment-jsdom": "^26.6.2",
+    "prettier": "^2.2.1",
+    "style-loader": "^2.0.0",
+    "test-data-bot": "^0.8.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.7.3"
+  }
+}
