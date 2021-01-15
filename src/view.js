@@ -34,7 +34,9 @@ const renderPosts = ({ posts, onPostClick, openedPostsIds }) => {
           (post) => `
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <a href="${post.link}" class="${
-            openedPostsIds.includes(post.id) ? "fw-normal" : "fw-bold"
+            openedPostsIds.includes(post.id)
+              ? "fw-normal font-weight-normal"
+              : "fw-bold font-weight-bold"
           }" data-id="2" target="_blank" rel="noopener noreferrer">
                 ${post.title}
               </a>
