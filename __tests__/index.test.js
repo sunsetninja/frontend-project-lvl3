@@ -6,7 +6,14 @@ import nock from "nock";
 import testingLibrary from "@testing-library/dom";
 import testingLibraryUserEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom/extend-expect";
-import run from "../src/application.js";
+
+import initApp from "../src/init.js";
+import runApp from "../src/application.js";
+
+const start = async () => {
+  await initApp();
+  runApp();
+};
 
 const userEvent = testingLibraryUserEvent.default;
 
@@ -49,7 +56,7 @@ beforeEach(() => {
     "text/html"
   );
   document.body.innerHTML = initDOM.querySelector("body").innerHTML;
-  run();
+  start();
 });
 
 test("initial app state", async () => {
