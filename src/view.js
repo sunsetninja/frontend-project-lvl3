@@ -63,15 +63,18 @@ export default (state, path, value, prevValue) => {
   const rssFormEl = root.querySelector('[data-component="rss-form"]');
 
   if (path.includes("rssForm.state")) {
+    const fieldEl = rssFormEl.elements.url;
     const feedbackEl = root.querySelector('[data-element="form-feedback"]');
     const rssSubmitEl = rssFormEl.querySelector('[type="submit"]');
 
     switch (value) {
       case "pending":
         rssSubmitEl.setAttribute("disabled", true);
+        fieldEl.setAttribute("readonly", true);
         break;
       case "fulfilled":
         rssSubmitEl.removeAttribute("disabled");
+        fieldEl.removeAttribute("readonly");
         feedbackEl.classList.remove("text-danger");
         feedbackEl.classList.add("text-success");
         feedbackEl.textContent = i18next.t("rss_loaded");
@@ -79,6 +82,7 @@ export default (state, path, value, prevValue) => {
         break;
       case "rejected":
         rssSubmitEl.removeAttribute("disabled");
+        fieldEl.removeAttribute("readonly");
         feedbackEl.classList.remove("text-success");
         feedbackEl.classList.add("text-danger");
         feedbackEl.textContent = state.rssForm.errors.apiError;
