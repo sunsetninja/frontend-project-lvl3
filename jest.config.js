@@ -1,6 +1,6 @@
 export default {
-  testEnvironment: "jest-environment-jsdom",
+  testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
-    "\\.(css|sass|scss)$": "identity-obj-proxy",
+    '\\.(css|sass|scss)$': 'identity-obj-proxy',
   },
 };

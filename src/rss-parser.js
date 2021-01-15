@@ -1,23 +1,23 @@
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 const domparser = new DOMParser();
 
 export default (data) => {
-  const parsed = domparser.parseFromString(data, "text/xml");
+  const parsed = domparser.parseFromString(data, 'text/xml');
   const feedId = uuidv4();
 
   return {
     feed: {
       id: feedId,
-      title: parsed.querySelector("title").textContent,
-      description: parsed.querySelector("description").textContent,
+      title: parsed.querySelector('title').textContent,
+      description: parsed.querySelector('description').textContent,
     },
-    posts: [...parsed.querySelectorAll("item")].map((post) => ({
-      id: post.querySelector("guid").textContent,
+    posts: [...parsed.querySelectorAll('item')].map((post) => ({
+      id: post.querySelector('guid').textContent,
       feedId,
-      title: post.querySelector("title").textContent,
-      description: post.querySelector("description").textContent,
-      link: post.querySelector("link").textContent,
+      title: post.querySelector('title').textContent,
+      description: post.querySelector('description').textContent,
+      link: post.querySelector('link').textContent,
     })),
   };
 };

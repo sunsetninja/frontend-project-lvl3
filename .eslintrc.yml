@@ -1,28 +1,34 @@
 ---
 plugins:
   - jest
-  - prettier
+  - functional
+  - testing-library
+  - jest-dom
 
 env:
-  browser: true
   jest: true
-  node: true
+  browser: true
   es2020: true
 
 extends:
-  - "airbnb-base"
-  - "plugin:jest/recommended"
-  - "prettier"
+  - 'airbnb-base'
+  - 'plugin:jest/recommended'
+  - 'plugin:functional/external-recommended'
+  - 'plugin:functional/recommended'
+  - 'plugin:testing-library/recommended'
+  - 'plugin:jest-dom/recommended'
 
 parserOptions:
-  ecmaVersion: 11
-  sourceType: module
-
-ignorePatterns: ["build"]
+  ecmaVersion: 2020
 
 rules:
-  no-console: 0
-  import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
-  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
-  import/no-extraneous-dependencies:
-    ["error", { "devDependencies": ["config/**", "__tests__/**"] }]
+  import/extensions: 0
+  import/no-unresolved: 0
+  functional/no-conditional-statement: 0
+  functional/no-expression-statement: 0
+  functional/immutable-data: 0
+  functional/functional-parameters: 0
+  functional/no-try-statement: 0
+  functional/no-throw-statement: 0
+  no-param-reassign: 0
+  import/no-extraneous-dependencies: ['error', { 'devDependencies': ['config/**', '__tests__/**'] }]
