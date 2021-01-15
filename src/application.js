@@ -117,18 +117,9 @@ const runApp = () => {
 
       axios
         .get(formatRssUrl(fields.url))
-        .then(
-          ({ data }) => parseRss(data.contents),
-          (error) => {
-            watchedState.rssForm.errors = {
-              apiError: error,
-            };
-
-            watchedState.rssForm.state = "rejected";
-          }
-        )
-        .then(
-          (parsed) => {
+        .then(({ data }) => {
+          try {
+            const parsed = parseRss(data.contents);
             watchedState.feeds = [{ ...parsed.feed, url: fields.url }].concat(
               watchedState.feeds
             );
@@ -136,15 +127,17 @@ const runApp = () => {
             watchedState.rssForm.state = "fulfilled";
 
             pollFeeds(fields.url);
-          },
-          () => {
-            watchedState.rssForm.errors = {
-              apiError: i18next.t("rss_invalid"),
-            };
-
-            watchedState.rssForm.state = "rejected";
+          } catch (error) {
+            throw new Error(i18next.t("rss_invalid"));
           }
-        );
+        })
+        .catch((error) => {
+          watchedState.rssForm.errors = {
+            apiError: error,
+          };
+
+          watchedState.rssForm.state = "rejected";
+        });
     }
   });
 };
