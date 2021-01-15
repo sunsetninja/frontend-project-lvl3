@@ -15,7 +15,7 @@ const formatRssUrl = (url) =>
 const initApp = async () => {
   await i18next.init({
     lng: "en",
-    debug: true,
+    debug: false,
     resources: {
       en: {
         translation: {
@@ -94,7 +94,6 @@ const runApp = () => {
             watchedState.posts,
             "title"
           );
-          console.log(newPosts);
           watchedState.posts = newPosts.concat(watchedState.posts);
         })
         .then(() => {

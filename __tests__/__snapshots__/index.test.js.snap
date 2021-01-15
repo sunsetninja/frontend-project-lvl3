@@ -1,0 +1,891 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`post preview open 1`] = `
+<div
+  aria-labelledby="modalLabel"
+  aria-modal="true"
+  class="modal fade show"
+  data-component="modal"
+  data-testid="modal"
+  id="modal"
+  role="dialog"
+  style="padding-right: 0px; display: block;"
+  tabindex="-1"
+>
+  
+      
+  <div
+    class="modal-dialog"
+  >
+    
+        
+    <div
+      class="modal-content"
+    >
+      
+          
+      <div
+        class="modal-header"
+      >
+        
+            
+        <h5
+          class="modal-title"
+          data-element="modal-title"
+        >
+          Lorem ipsum 2021-01-15T08:33:00Z
+        </h5>
+        
+            
+        <button
+          aria-label="Close"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          type="button"
+        />
+        
+          
+      </div>
+      
+          
+      <div
+        class="modal-body"
+        data-element="modal-body"
+      >
+        Laborum nulla cupidatat labore aliquip minim enim mollit sint nisi tempor aliquip nisi cupidatat.
+      </div>
+      
+          
+      <div
+        class="modal-footer"
+      >
+        
+            
+        <a
+          class="btn btn-primary"
+          data-element="modal-full-article-link"
+          href="http://example.com/test/1610699580"
+          rel="noopener noreferrer"
+          role="button"
+          target="_blank"
+        >
+          Full article
+        </a>
+        
+            
+        <button
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+          type="button"
+        >
+          
+              Close
+            
+        </button>
+        
+          
+      </div>
+      
+        
+    </div>
+    
+      
+  </div>
+  
+    
+</div>
+`;
+
+exports[`post preview open 2`] = `
+<div
+  class="col-md-10 col-lg-8 mx-auto posts"
+  data-component="posts"
+  data-testid="posts"
+>
+  
+    
+  <h2>
+    Posts
+  </h2>
+  
+    
+  <ul
+    class="list-group"
+  >
+    
+      
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-normal"
+        data-id="2"
+        href="http://example.com/test/1610699580"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:33:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699580"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699520"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:32:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699520"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699460"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:31:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699460"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699400"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:30:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699400"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699340"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:29:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699340"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699280"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:28:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699280"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699220"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:27:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699220"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699160"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:26:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699160"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699100"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:25:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699100"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699040"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:24:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699040"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+    
+  </ul>
+  
+  
+</div>
+`;
+
+exports[`valid rss urls 1`] = `
+<div
+  class="col-md-10 col-lg-8 mx-auto feeds"
+  data-component="feeds"
+  data-testid="feeds"
+>
+  
+    
+  <h2>
+    Feeds
+  </h2>
+  
+    
+  <ul
+    class="list-group mb-5"
+  >
+    
+      
+              
+    <li
+      class="list-group-item"
+    >
+      
+                
+      <h3>
+        Lorem ipsum feed for an interval of 1 minutes with 10 item(s)
+      </h3>
+      
+                
+      <p>
+        This is a constantly updating lorem ipsum feed
+      </p>
+      
+              
+    </li>
+    
+          
+    
+  </ul>
+  
+  
+</div>
+`;
+
+exports[`valid rss urls 2`] = `
+<div
+  class="col-md-10 col-lg-8 mx-auto posts"
+  data-component="posts"
+  data-testid="posts"
+>
+  
+    
+  <h2>
+    Posts
+  </h2>
+  
+    
+  <ul
+    class="list-group"
+  >
+    
+      
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699580"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:33:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699580"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699520"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:32:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699520"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699460"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:31:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699460"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699400"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:30:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699400"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699340"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:29:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699340"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699280"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:28:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699280"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699220"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:27:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699220"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699160"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:26:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699160"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699100"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:25:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699100"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+            
+    <li
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      
+              
+      <a
+        class="fw-bold"
+        data-id="2"
+        href="http://example.com/test/1610699040"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+                Lorem ipsum 2021-01-15T08:24:00Z
+              
+      </a>
+      
+              
+      <button
+        class="btn btn-primary btn-sm"
+        data-bs-target="#modal"
+        data-bs-toggle="modal"
+        data-id="http://example.com/test/1610699040"
+        type="button"
+      >
+        
+                Preview
+              
+      </button>
+      
+            
+    </li>
+    
+          
+    
+  </ul>
+  
+  
+</div>
+`;

@@ -13,7 +13,7 @@ export default (data) => {
       description: parsed.querySelector("description").textContent,
     },
     posts: [...parsed.querySelectorAll("item")].map((post) => ({
-      id: uuidv4(),
+      id: post.querySelector("guid").textContent,
       feedId,
       title: post.querySelector("title").textContent,
       description: post.querySelector("description").textContent,
