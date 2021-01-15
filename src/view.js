@@ -21,7 +21,7 @@ const renderFeeds = ({ feeds }) => {
   `;
 };
 
-const renderPost = (openedPostsIds, post) => `
+const renderPost = (post, openedPostsIds) => `
 <li class="list-group-item d-flex justify-content-between align-items-start">
   <a href="${post.link}" class="${
   openedPostsIds.includes(post.id) ? 'fw-normal font-weight-normal' : 'fw-bold font-weight-bold'

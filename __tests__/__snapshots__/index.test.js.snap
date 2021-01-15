@@ -114,12 +114,12 @@ exports[`post preview open 2`] = `
   >
     
       
-            
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-normal font-weight-normal"
         data-id="2"
@@ -128,11 +128,11 @@ exports[`post preview open 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:33:00Z
-              
+    Lorem ipsum 2021-01-15T08:33:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -141,20 +141,20 @@ exports[`post preview open 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -163,11 +163,11 @@ exports[`post preview open 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:32:00Z
-              
+    Lorem ipsum 2021-01-15T08:32:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -176,20 +176,20 @@ exports[`post preview open 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -198,11 +198,11 @@ exports[`post preview open 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:31:00Z
-              
+    Lorem ipsum 2021-01-15T08:31:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -211,20 +211,20 @@ exports[`post preview open 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -233,11 +233,11 @@ exports[`post preview open 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:30:00Z
-              
+    Lorem ipsum 2021-01-15T08:30:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -246,20 +246,20 @@ exports[`post preview open 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -268,11 +268,11 @@ exports[`post preview open 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:29:00Z
-              
+    Lorem ipsum 2021-01-15T08:29:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -281,20 +281,20 @@ exports[`post preview open 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -303,11 +303,11 @@ exports[`post preview open 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:28:00Z
-              
+    Lorem ipsum 2021-01-15T08:28:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -316,20 +316,20 @@ exports[`post preview open 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -338,11 +338,11 @@ exports[`post preview open 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:27:00Z
-              
+    Lorem ipsum 2021-01-15T08:27:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -351,20 +351,20 @@ exports[`post preview open 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -373,11 +373,11 @@ exports[`post preview open 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:26:00Z
-              
+    Lorem ipsum 2021-01-15T08:26:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -386,20 +386,20 @@ exports[`post preview open 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -408,11 +408,11 @@ exports[`post preview open 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:25:00Z
-              
+    Lorem ipsum 2021-01-15T08:25:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -421,20 +421,20 @@ exports[`post preview open 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -443,11 +443,11 @@ exports[`post preview open 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:24:00Z
-              
+    Lorem ipsum 2021-01-15T08:24:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -456,14 +456,14 @@ exports[`post preview open 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
+
     
   </ul>
   
@@ -488,26 +488,26 @@ exports[`valid rss urls 1`] = `
     class="list-group mb-5"
   >
     
-      
-              
+  
+          
     <li
       class="list-group-item"
     >
       
-                
+            
       <h3>
         Lorem ipsum feed for an interval of 1 minutes with 10 item(s)
       </h3>
       
-                
+            
       <p>
         This is a constantly updating lorem ipsum feed
       </p>
       
-              
+          
     </li>
     
-          
+      
     
   </ul>
   
@@ -533,12 +533,12 @@ exports[`valid rss urls 2`] = `
   >
     
       
-            
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -547,11 +547,11 @@ exports[`valid rss urls 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:33:00Z
-              
+    Lorem ipsum 2021-01-15T08:33:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -560,20 +560,20 @@ exports[`valid rss urls 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -582,11 +582,11 @@ exports[`valid rss urls 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:32:00Z
-              
+    Lorem ipsum 2021-01-15T08:32:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -595,20 +595,20 @@ exports[`valid rss urls 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -617,11 +617,11 @@ exports[`valid rss urls 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:31:00Z
-              
+    Lorem ipsum 2021-01-15T08:31:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -630,20 +630,20 @@ exports[`valid rss urls 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -652,11 +652,11 @@ exports[`valid rss urls 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:30:00Z
-              
+    Lorem ipsum 2021-01-15T08:30:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -665,20 +665,20 @@ exports[`valid rss urls 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -687,11 +687,11 @@ exports[`valid rss urls 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:29:00Z
-              
+    Lorem ipsum 2021-01-15T08:29:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -700,20 +700,20 @@ exports[`valid rss urls 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -722,11 +722,11 @@ exports[`valid rss urls 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:28:00Z
-              
+    Lorem ipsum 2021-01-15T08:28:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -735,20 +735,20 @@ exports[`valid rss urls 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -757,11 +757,11 @@ exports[`valid rss urls 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:27:00Z
-              
+    Lorem ipsum 2021-01-15T08:27:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -770,20 +770,20 @@ exports[`valid rss urls 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -792,11 +792,11 @@ exports[`valid rss urls 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:26:00Z
-              
+    Lorem ipsum 2021-01-15T08:26:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -805,20 +805,20 @@ exports[`valid rss urls 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -827,11 +827,11 @@ exports[`valid rss urls 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:25:00Z
-              
+    Lorem ipsum 2021-01-15T08:25:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -840,20 +840,20 @@ exports[`valid rss urls 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
-            
+
+
     <li
       class="list-group-item d-flex justify-content-between align-items-start"
     >
       
-              
+  
       <a
         class="fw-bold font-weight-bold"
         data-id="2"
@@ -862,11 +862,11 @@ exports[`valid rss urls 2`] = `
         target="_blank"
       >
         
-                Lorem ipsum 2021-01-15T08:24:00Z
-              
+    Lorem ipsum 2021-01-15T08:24:00Z
+  
       </a>
       
-              
+  
       <button
         class="btn btn-primary btn-sm"
         data-bs-target="#modal"
@@ -875,14 +875,14 @@ exports[`valid rss urls 2`] = `
         type="button"
       >
         
-                Preview
-              
+    Preview
+  
       </button>
       
-            
+
     </li>
     
-          
+
     
   </ul>
   
