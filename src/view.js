@@ -87,7 +87,7 @@ export default (state, path, value, prevValue) => {
         fieldEl.removeAttribute("readonly");
         feedbackEl.classList.remove("text-success");
         feedbackEl.classList.add("text-danger");
-        feedbackEl.textContent = state.rssForm.errors.apiError?.message;
+        feedbackEl.textContent = state.rssForm.errors.apiError.message;
         break;
       default:
         break;

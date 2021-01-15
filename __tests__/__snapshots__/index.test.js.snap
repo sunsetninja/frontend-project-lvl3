@@ -121,7 +121,7 @@ exports[`post preview open 2`] = `
       
               
       <a
-        class="fw-normal"
+        class="fw-normal font-weight-normal"
         data-id="2"
         href="http://example.com/test/1610699580"
         rel="noopener noreferrer"
@@ -156,7 +156,7 @@ exports[`post preview open 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699520"
         rel="noopener noreferrer"
@@ -191,7 +191,7 @@ exports[`post preview open 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699460"
         rel="noopener noreferrer"
@@ -226,7 +226,7 @@ exports[`post preview open 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699400"
         rel="noopener noreferrer"
@@ -261,7 +261,7 @@ exports[`post preview open 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699340"
         rel="noopener noreferrer"
@@ -296,7 +296,7 @@ exports[`post preview open 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699280"
         rel="noopener noreferrer"
@@ -331,7 +331,7 @@ exports[`post preview open 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699220"
         rel="noopener noreferrer"
@@ -366,7 +366,7 @@ exports[`post preview open 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699160"
         rel="noopener noreferrer"
@@ -401,7 +401,7 @@ exports[`post preview open 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699100"
         rel="noopener noreferrer"
@@ -436,7 +436,7 @@ exports[`post preview open 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699040"
         rel="noopener noreferrer"
@@ -540,7 +540,7 @@ exports[`valid rss urls 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699580"
         rel="noopener noreferrer"
@@ -575,7 +575,7 @@ exports[`valid rss urls 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699520"
         rel="noopener noreferrer"
@@ -610,7 +610,7 @@ exports[`valid rss urls 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699460"
         rel="noopener noreferrer"
@@ -645,7 +645,7 @@ exports[`valid rss urls 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699400"
         rel="noopener noreferrer"
@@ -680,7 +680,7 @@ exports[`valid rss urls 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699340"
         rel="noopener noreferrer"
@@ -715,7 +715,7 @@ exports[`valid rss urls 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699280"
         rel="noopener noreferrer"
@@ -750,7 +750,7 @@ exports[`valid rss urls 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699220"
         rel="noopener noreferrer"
@@ -785,7 +785,7 @@ exports[`valid rss urls 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699160"
         rel="noopener noreferrer"
@@ -820,7 +820,7 @@ exports[`valid rss urls 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699100"
         rel="noopener noreferrer"
@@ -855,7 +855,7 @@ exports[`valid rss urls 2`] = `
       
               
       <a
-        class="fw-bold"
+        class="fw-bold font-weight-bold"
         data-id="2"
         href="http://example.com/test/1610699040"
         rel="noopener noreferrer"
