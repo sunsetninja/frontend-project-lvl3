@@ -2,6 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "RSS aggregator web app",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sunsetninja/frontend-project-lvl3.git"
