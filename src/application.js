@@ -25,6 +25,7 @@ const initApp = async () => {
           rss_invalid: "This source doesn't contain valid rss",
           url_required: "URL is required",
           url_invalid: "Must be valid URL",
+          network_error: "Network error",
         },
       },
     },
@@ -117,20 +118,25 @@ const runApp = () => {
 
       axios
         .get(formatRssUrl(fields.url))
-        .then(({ data }) => {
-          try {
-            const parsed = parseRss(data.contents);
-            watchedState.feeds = [{ ...parsed.feed, url: fields.url }].concat(
-              watchedState.feeds
-            );
-            watchedState.posts = parsed.posts.concat(watchedState.posts);
-            watchedState.rssForm.state = "fulfilled";
+        .then(
+          ({ data }) => {
+            try {
+              const parsed = parseRss(data.contents);
+              watchedState.feeds = [{ ...parsed.feed, url: fields.url }].concat(
+                watchedState.feeds
+              );
+              watchedState.posts = parsed.posts.concat(watchedState.posts);
+              watchedState.rssForm.state = "fulfilled";
 
-            pollFeeds(fields.url);
-          } catch (error) {
-            throw new Error(i18next.t("rss_invalid"));
+              pollFeeds(fields.url);
+            } catch (error) {
+              throw new Error(i18next.t("rss_invalid"));
+            }
+          },
+          () => {
+            throw new Error(i18next.t("network_error"));
           }
-        })
+        )
         .catch((error) => {
           watchedState.rssForm.errors = {
             apiError: error,
