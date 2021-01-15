@@ -82,7 +82,6 @@ export default (state, path, value, prevValue) => {
         feedbackEl.classList.remove("text-success");
         feedbackEl.classList.add("text-danger");
         feedbackEl.textContent = state.rssForm.errors.apiError;
-        rssFormEl.reset();
         break;
       default:
         break;

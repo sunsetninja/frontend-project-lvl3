@@ -22,6 +22,7 @@ const initApp = async () => {
           preview: "Preview",
           rss_loaded: "Rss has been loaded",
           rss_exists: "Rss already exists",
+          rss_invalid: "This source doesn't contain valid rss",
           url_required: "URL is required",
           url_invalid: "Must be valid URL",
         },
@@ -117,15 +118,24 @@ const runApp = () => {
       axios
         .get(formatRssUrl(fields.url))
         .then(({ data }) => parseRss(data.contents))
-        .then((parsed) => {
-          watchedState.feeds = [{ ...parsed.feed, url: fields.url }].concat(
-            watchedState.feeds
-          );
-          watchedState.posts = parsed.posts.concat(watchedState.posts);
-          watchedState.rssForm.state = "fulfilled";
+        .then(
+          (parsed) => {
+            watchedState.feeds = [{ ...parsed.feed, url: fields.url }].concat(
+              watchedState.feeds
+            );
+            watchedState.posts = parsed.posts.concat(watchedState.posts);
+            watchedState.rssForm.state = "fulfilled";
 
-          pollFeeds(fields.url);
-        })
+            pollFeeds(fields.url);
+          },
+          () => {
+            watchedState.rssForm.errors = {
+              apiError: i18next.t("rss_invalid"),
+            };
+
+            watchedState.rssForm.state = "rejected";
+          }
+        )
         .catch((error) => {
           watchedState.rssForm.errors = {
             apiError: error,
