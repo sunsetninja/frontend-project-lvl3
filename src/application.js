@@ -23,7 +23,7 @@ const initApp = async () => {
           rss_loaded: "Rss has been loaded",
           rss_exists: "Rss already exists",
           url_required: "URL is required",
-          url_invalid: "URL is invalid",
+          url_invalid: "Must be valid URL",
         },
       },
     },
