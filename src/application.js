@@ -10,7 +10,34 @@ import parseRss from "./rss-parser.js";
 const formatRssUrl = (url) =>
   `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
 
-export default () => {
+const initApp = async () => {
+  await i18next.init({
+    lng: "en",
+    debug: false,
+    resources: {
+      en: {
+        translation: {
+          feeds: "Feeds",
+          posts: "Posts",
+          preview: "Preview",
+          rss_loaded: "Rss has been loaded",
+          rss_exists: "Rss already exists",
+          url_required: "URL is required",
+          url_invalid: "URL is invalid",
+        },
+      },
+    },
+  });
+
+  yup.setLocale({
+    string: {
+      required: i18next.t("url_required"),
+      url: i18next.t("url_invalid"),
+    },
+  });
+};
+
+const runApp = () => {
   const appState = {
     rssForm: {
       isValid: true,
@@ -108,4 +135,9 @@ export default () => {
         });
     }
   });
+};
+
+export default async () => {
+  await initApp();
+  runApp();
 };

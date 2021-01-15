@@ -1,9 +1,4 @@
-import initApp from "./init.js";
-import runApp from "./application.js";
+import startApp from "./application.js";
+import "./init-styles.js";
 
-const start = async () => {
-  await initApp();
-  runApp();
-};
-
-start();
+startApp();
