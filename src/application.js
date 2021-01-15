@@ -117,7 +117,16 @@ const runApp = () => {
 
       axios
         .get(formatRssUrl(fields.url))
-        .then(({ data }) => parseRss(data.contents))
+        .then(
+          ({ data }) => parseRss(data.contents),
+          (error) => {
+            watchedState.rssForm.errors = {
+              apiError: error,
+            };
+
+            watchedState.rssForm.state = "rejected";
+          }
+        )
         .then(
           (parsed) => {
             watchedState.feeds = [{ ...parsed.feed, url: fields.url }].concat(
@@ -135,14 +144,7 @@ const runApp = () => {
 
             watchedState.rssForm.state = "rejected";
           }
-        )
-        .catch((error) => {
-          watchedState.rssForm.errors = {
-            apiError: error,
-          };
-
-          watchedState.rssForm.state = "rejected";
-        });
+        );
     }
   });
 };

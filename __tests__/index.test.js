@@ -73,7 +73,7 @@ test("invalid rss url", async () => {
   await userEvent.click(submitEl);
 
   expect(urlEl).toHaveClass("is-invalid");
-  expect(feedbackEl).toHaveTextContent(/url is invalid/i);
+  expect(feedbackEl).toHaveTextContent(/must be valid url/i);
 });
 
 test("existed rss url", async () => {
