@@ -75,12 +75,14 @@ export default (state, path, value, prevValue) => {
         feedbackEl.classList.remove("text-danger");
         feedbackEl.classList.add("text-success");
         feedbackEl.textContent = i18next.t("rss_loaded");
+        rssFormEl.reset();
         break;
       case "rejected":
         rssSubmitEl.removeAttribute("disabled");
         feedbackEl.classList.remove("text-success");
         feedbackEl.classList.add("text-danger");
         feedbackEl.textContent = state.rssForm.errors.apiError;
+        rssFormEl.reset();
         break;
       default:
         break;

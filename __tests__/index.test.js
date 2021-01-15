@@ -88,7 +88,6 @@ test("existed rss url", async () => {
     await screen.getByText(/rss has been loaded/i);
   });
 
-  await userEvent.clear(urlEl);
   await userEvent.type(urlEl, rssUrl1.toString());
   await userEvent.click(submitEl);
 
@@ -112,7 +111,6 @@ test("valid rss urls", async () => {
     expect(feedbackEl).toHaveTextContent(/rss has been loaded/i);
   });
 
-  await userEvent.clear(urlEl);
   await userEvent.type(urlEl, rssUrl2.toString());
   await userEvent.click(submitEl);
 
