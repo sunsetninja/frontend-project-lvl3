@@ -13,7 +13,7 @@ console.groupEnd();
 
 const PATHS = {
   src: path.resolve(__dirname, "../../src/"),
-  public: path.resolve(__dirname, "../../public/"),
+  public: path.resolve(__dirname, "../../"),
   build: path.resolve(__dirname, "../../build/"),
   node_modules: path.resolve(__dirname, "../../node_modules/"),
 };

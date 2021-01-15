@@ -52,7 +52,7 @@ const domparser = new DOMParser();
 
 beforeEach(() => {
   const initDOM = domparser.parseFromString(
-    fs.readFileSync(path.resolve(__dirname, "../public/index.html")).toString(),
+    fs.readFileSync(path.resolve(__dirname, "../index.html")).toString(),
     "text/html"
   );
   document.body.innerHTML = initDOM.querySelector("body").innerHTML;
