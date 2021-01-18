@@ -4,38 +4,43 @@ import * as yup from 'yup';
 import onChange from 'on-change';
 import axios from 'axios';
 import _ from 'lodash';
+import { v4 as uuidv4 } from 'uuid';
 import render from './view.js';
 import parseRss from './rss-parser.js';
 
 const addProxy = (url) => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
 
-const initApp = async () => {
-  await i18next.init({
-    lng: 'en',
-    debug: false,
-    resources: {
-      en: {
-        translation: {
-          feeds: 'Feeds',
-          posts: 'Posts',
-          preview: 'Preview',
-          rss_loaded: 'Rss has been loaded',
-          rss_exists: 'Rss already exists',
-          rss_invalid: "This source doesn't contain valid rss",
-          url_required: 'URL is required',
-          url_invalid: 'Must be valid URL',
-          network_error: 'Network error',
-        },
+const initApp = () => {
+  const i18Resources = {
+    en: {
+      translation: {
+        feeds: 'Feeds',
+        posts: 'Posts',
+        preview: 'Preview',
+        rss_loaded: 'Rss has been loaded',
+        rss_exists: 'Rss already exists',
+        rss_invalid: "This source doesn't contain valid rss",
+        url_required: 'URL is required',
+        url_invalid: 'Must be valid URL',
+        network_error: 'Network error',
       },
     },
-  });
+  };
 
-  yup.setLocale({
-    string: {
-      required: i18next.t('url_required'),
-      url: i18next.t('url_invalid'),
-    },
-  });
+  return i18next
+    .init({
+      lng: 'en',
+      debug: false,
+      resources: i18Resources,
+    })
+    .then(() => {
+      yup.setLocale({
+        string: {
+          required: i18next.t('url_required'),
+          url: i18next.t('url_invalid'),
+        },
+      });
+    });
 };
 
 const runApp = () => {
@@ -80,7 +85,7 @@ const runApp = () => {
     render(watchedState, path, value, prevValue);
   });
 
-  const pollFeeds = (url, timeoutId) => {
+  const pollPosts = (url, timeoutId) => {
     clearTimeout(timeoutId);
 
     const poolingTimeoutId = setTimeout(() => {
@@ -92,7 +97,7 @@ const runApp = () => {
           watchedState.posts = newPosts.concat(watchedState.posts);
         })
         .then(() => {
-          pollFeeds(url, poolingTimeoutId);
+          pollPosts(url, poolingTimeoutId);
         });
     }, 5000);
   };
@@ -113,26 +118,34 @@ const runApp = () => {
 
       axios
         .get(addProxy(fields.url))
-        .then(
-          ({ data }) => {
-            try {
-              const parsed = parseRss(data.contents);
-              watchedState.feeds = [{ ...parsed.feed, url: fields.url }].concat(watchedState.feeds);
-              watchedState.posts = parsed.posts.concat(watchedState.posts);
-              watchedState.rssForm.state = 'fulfilled';
+        .then(({ data }) => {
+          try {
+            return parseRss(data.contents);
+          } catch (error) {
+            error.message = i18next.t('rss_invalid');
+            throw error;
+          }
+        })
+        .then((parsed) => {
+          const feed = {
+            id: uuidv4(),
+            title: parsed.title,
+            description: parsed.description,
+            url: fields.url,
+          };
 
-              pollFeeds(fields.url);
-            } catch (error) {
-              throw new Error(i18next.t('rss_invalid'));
-            }
-          },
-          () => {
-            throw new Error(i18next.t('network_error'));
-          },
-        )
+          watchedState.feeds = [feed].concat(watchedState.feeds);
+          watchedState.posts = parsed.posts.concat(
+            watchedState.posts.map((post) => ({ ...post, feedId: feed.id })),
+          );
+          watchedState.rssForm.state = 'fulfilled';
+        })
+        .then(() => {
+          pollPosts(fields.url);
+        })
         .catch((error) => {
           watchedState.rssForm.errors = {
-            apiError: error,
+            rssError: error,
           };
 
           watchedState.rssForm.state = 'rejected';
@@ -141,7 +154,6 @@ const runApp = () => {
   });
 };
 
-export default async () => {
-  await initApp();
-  runApp();
+export default () => {
+  initApp().then(runApp);
 };

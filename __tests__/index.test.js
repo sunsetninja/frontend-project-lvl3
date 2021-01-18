@@ -22,9 +22,11 @@ let rssData1;
 const rssUrl2 = new URL('https://lorem.com/feed1.rss');
 let rssData2;
 
+const getFixture = (name) => fs.readFileSync(path.resolve(__dirname, '__fixtures__', name));
+
 beforeAll(() => {
-  rssData1 = fs.readFileSync(path.resolve(__dirname, '__fixtures__/response1.rss')).toString();
-  rssData2 = fs.readFileSync(path.resolve(__dirname, '__fixtures__/response2.rss')).toString();
+  rssData1 = getFixture('response1.rss').toString();
+  rssData2 = getFixture('response2.rss').toString();
   nock.disableNetConnect();
 
   nock('https://api.allorigins.win')
@@ -103,6 +105,7 @@ test('valid rss urls', async () => {
   await userEvent.type(urlEl, rssUrl1.toString());
   await userEvent.click(submitEl);
 
+  expect(urlEl).toHaveAttribute('readonly');
   expect(submitEl).toBeDisabled();
 
   await waitFor(() => {

@@ -1,23 +1,20 @@
-import { v4 as uuidv4 } from 'uuid';
-
 const domparser = new DOMParser();
 
 export default (data) => {
-  const parsed = domparser.parseFromString(data, 'text/xml');
-  const feedId = uuidv4();
+  try {
+    const parsed = domparser.parseFromString(data, 'text/xml');
 
-  return {
-    feed: {
-      id: feedId,
+    return {
       title: parsed.querySelector('title').textContent,
       description: parsed.querySelector('description').textContent,
-    },
-    posts: [...parsed.querySelectorAll('item')].map((post) => ({
-      id: post.querySelector('guid').textContent,
-      feedId,
-      title: post.querySelector('title').textContent,
-      description: post.querySelector('description').textContent,
-      link: post.querySelector('link').textContent,
-    })),
-  };
+      posts: [...parsed.querySelectorAll('item')].map((post) => ({
+        id: post.querySelector('guid').textContent,
+        title: post.querySelector('title').textContent,
+        description: post.querySelector('description').textContent,
+        link: post.querySelector('link').textContent,
+      })),
+    };
+  } catch (e) {
+    throw new Error('rss_invalid');
+  }
 };
