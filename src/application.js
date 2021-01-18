@@ -123,14 +123,20 @@ const runApp = () => {
 
       axios
         .get(addProxy(fields.url))
-        .then(({ data }) => {
-          try {
-            return parseRss(data.contents);
-          } catch (error) {
-            error.message = i18next.t('rss_invalid');
+        .then(
+          ({ data }) => {
+            try {
+              return parseRss(data.contents);
+            } catch (error) {
+              error.message = i18next.t('rss_invalid');
+              throw error;
+            }
+          },
+          (error) => {
+            error.message = i18next.t('network_error');
             throw error;
-          }
-        })
+          },
+        )
         .then((parsed) => {
           const feed = {
             id: uuidv4(),
