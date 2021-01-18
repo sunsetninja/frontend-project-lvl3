@@ -8,7 +8,12 @@ import { v4 as uuidv4 } from 'uuid';
 import render from './view.js';
 import parseRss from './rss-parser.js';
 
-const addProxy = (url) => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+const addProxy = (url) => {
+  const urlWithProxy = new URL('/get', 'https://hexlet-allorigins.herokuapp.com');
+  urlWithProxy.searchParams.set('url', url);
+  urlWithProxy.searchParams.set('disableCache', 'true');
+  return urlWithProxy.toString();
+};
 
 const initApp = () => {
   const i18Resources = {

@@ -19,7 +19,7 @@ const { screen, waitFor } = testingLibrary;
 
 const rssUrl1 = 'https://lorem.com/feed1.rss';
 let rssData1;
-const rssUrl2 = new URL('https://lorem.com/feed1.rss');
+const rssUrl2 = 'https://lorem.com/feed1.rss';
 let rssData2;
 
 const getFixture = (name) => fs.readFileSync(path.resolve(__dirname, '__fixtures__', name));
@@ -29,15 +29,17 @@ beforeAll(() => {
   rssData2 = getFixture('response2.rss').toString();
   nock.disableNetConnect();
 
-  nock('https://api.allorigins.win')
+  nock('https://hexlet-allorigins.herokuapp.com')
     .persist()
     .defaultReplyHeaders({
       'access-control-allow-origin': '*',
       'access-control-allow-credentials': 'true',
     })
-    .get(`/get?url=${encodeURIComponent(rssUrl1)}`)
+    .get('/get')
+    .query({ url: rssUrl1, disableCache: 'true' })
     .reply(200, { contents: rssData1 })
-    .get(`/get?url=${encodeURIComponent(rssUrl2)}`)
+    .get('/get')
+    .query({ url: rssUrl2, disableCache: 'true' })
     .reply(200, { contents: rssData2 });
 });
 
