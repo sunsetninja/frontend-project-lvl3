@@ -90,19 +90,21 @@ const runApp = () => {
     render(watchedState, path, value, prevValue);
   });
 
-  const pollPosts = (url, timeoutId) => {
+  const pollPosts = (url, feedId, timeoutId) => {
     clearTimeout(timeoutId);
 
     const poolingTimeoutId = setTimeout(() => {
       axios
-        .get(url)
-        .then(({ data }) => parseRss(data))
+        .get(addProxy(url))
+        .then(({ data }) => parseRss(data.contents))
         .then((parsed) => {
           const newPosts = _.differenceBy(parsed.posts, watchedState.posts, 'title');
-          watchedState.posts = newPosts.concat(watchedState.posts);
+          watchedState.posts = newPosts
+            .map((post) => ({ ...post, feedId }))
+            .concat(watchedState.posts);
         })
         .then(() => {
-          pollPosts(url, poolingTimeoutId);
+          pollPosts(url, feedId, poolingTimeoutId);
         });
     }, 5000);
   };
@@ -146,13 +148,12 @@ const runApp = () => {
           };
 
           watchedState.feeds = [feed].concat(watchedState.feeds);
-          watchedState.posts = parsed.posts.concat(
-            watchedState.posts.map((post) => ({ ...post, feedId: feed.id })),
-          );
+          watchedState.posts = parsed.posts
+            .map((post) => ({ ...post, feedId: feed.id }))
+            .concat(watchedState.posts);
           watchedState.rssForm.state = 'fulfilled';
-        })
-        .then(() => {
-          pollPosts(fields.url);
+
+          pollPosts(fields.url, feed.id);
         })
         .catch((error) => {
           watchedState.rssForm.errors = {
