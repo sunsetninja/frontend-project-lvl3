@@ -15,6 +15,7 @@ export default (data) => {
       })),
     };
   } catch (e) {
-    throw new Error('rss_invalid');
+    e.isParsingError = true;
+    throw e;
   }
 };

@@ -28,6 +28,7 @@ const initApp = () => {
         url_required: 'URL is required',
         url_invalid: 'Must be valid URL',
         network_error: 'Network error',
+        unknown_error: 'Error, please try later',
       },
     },
   };
@@ -72,14 +73,14 @@ const runApp = () => {
 
   const validate = (fields, feeds) => {
     if (feeds.find((feed) => feed.url === fields.url)) {
-      return { url: new Error(i18next.t('rss_exists')) };
+      return { url: i18next.t('rss_exists') };
     }
 
     try {
       validationSchema.validateSync(fields, { abortEarly: false });
       return {};
     } catch (e) {
-      return _.keyBy(e.inner, 'path');
+      return e.inner.reduce((acc, { path, message }) => ({ ...acc, [path]: message }), {});
     }
   };
 
@@ -109,6 +110,16 @@ const runApp = () => {
     }, 5000);
   };
 
+  const getErrorMessage = (error) => {
+    if (error.isAxiosError) {
+      return i18next.t('network_error');
+    }
+    if (error.isParsingError) {
+      return i18next.t('rss_invalid');
+    }
+    return i18next.t('unknown_error');
+  };
+
   rssFormEl.addEventListener('submit', (ev) => {
     ev.preventDefault();
 
@@ -125,20 +136,7 @@ const runApp = () => {
 
       axios
         .get(addProxy(fields.url))
-        .then(
-          ({ data }) => {
-            try {
-              return parseRss(data.contents);
-            } catch (error) {
-              error.message = i18next.t('rss_invalid');
-              throw error;
-            }
-          },
-          (error) => {
-            error.message = i18next.t('network_error');
-            throw error;
-          },
-        )
+        .then(({ data }) => parseRss(data.contents))
         .then((parsed) => {
           const feed = {
             id: uuidv4(),
@@ -157,7 +155,7 @@ const runApp = () => {
         })
         .catch((error) => {
           watchedState.rssForm.errors = {
-            rssError: error,
+            rssError: getErrorMessage(error),
           };
 
           watchedState.rssForm.state = 'rejected';

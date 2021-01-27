@@ -80,7 +80,7 @@ export default (state, path, value, prevValue) => {
         fieldEl.removeAttribute('readonly');
         feedbackEl.classList.remove('text-success');
         feedbackEl.classList.add('text-danger');
-        feedbackEl.textContent = state.rssForm.errors.rssError.message;
+        feedbackEl.textContent = state.rssForm.errors.rssError;
         break;
       default:
         break;
@@ -102,7 +102,7 @@ export default (state, path, value, prevValue) => {
       fieldEl.classList.add('is-invalid');
       feedbackEl.classList.remove('text-success');
       feedbackEl.classList.add('text-danger');
-      feedbackEl.textContent = urlError.message;
+      feedbackEl.textContent = urlError;
     }
   }
 
